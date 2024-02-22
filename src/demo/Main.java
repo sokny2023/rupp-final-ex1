@@ -13,13 +13,18 @@ public class Main {
         for (int i = 0; i < n; i++) {
             System.out.print("Input number["+(i+1)+"]: ");
             numbers[i] = scanner.nextInt();
+            if (numbers[i] <= 0){
+                System.out.println("Input number is negative...!");
+                break;
+            }
         }
 
         // Display all input numbers
-        System.out.println("You have entered:");
+        System.out.print("All numbers : [ ");
         for (int number : numbers) {
-            System.out.print(number+", "+"\b");
+            System.out.print(number+" ");
         }
+        System.out.println("]");
 
         scanner.close();
     }
